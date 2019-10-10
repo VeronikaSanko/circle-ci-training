@@ -7,7 +7,9 @@ jobs:
     steps:
         - checkout
         - run: echo "Hello from 1"
-  "Flow two":       
+  "Flow two":  
+    requires: 
+        - "Flow one"
     docker: 
         - image: circleci/ruby:2.3-node
     steps:
