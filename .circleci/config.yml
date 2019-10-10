@@ -1,32 +1,25 @@
 version: 2.0
+
 jobs:
   "Flow one":
-  docker:
-  - image: circleci/ruby:2.2-node
-  steps:
-  - checkout
-  - run: echo "Hello from the first flow"
-  
-  "Flow  two":
-  docker:
-  - image: circleci/ruby:2.3-node
-  steps:
-  - checkout
-  - run: echo "Hello from the second flow"
-  
-  "Flow three":
-  docker:
-  - image: circleci/ruby:2.4-node
-  steps:
-  - checkout
-  - run: echo "Hello from the third flow"
- 
+    docker: 
+        - image: circleci/ruby:2.2-node
+    steps:
+        - checkout
+        - run: echo "Hello from 1"
+  "Flow two":       
+    docker: 
+        - image: circleci/ruby:2.3-node
+    steps:
+        - checkout
+        - run: echo "Hello from 2"        
+
 workflows:
   version: 2
   build:
     jobs:
-    - "Flow one"
-    - "Flow two"
-    - "Flow three"
-  
-  
+      - "Flow one"
+      - "Flow two"
+     
+   
+    
