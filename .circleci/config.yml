@@ -8,8 +8,7 @@ jobs:
     working_directory: ~/circleci-demo-workflows
     steps:
       - checkout
-      - run: bundle install --path vendor/bundle
-      - run: bundle exec rake db:create db:schema:load
+      - run: echo "Hello workflow 1"
       - run:
           name: Run tests
           command: rake
@@ -21,8 +20,7 @@ jobs:
     working_directory: ~/circleci-demo-workflows
     steps:
       - checkout
-      - run: bundle install --path vendor/bundle
-      - run: bundle exec rake db:create db:schema:load
+      - run: echo "Hello workflow 2"
       - run:
           name: Run tests
           command: rake
@@ -34,8 +32,7 @@ jobs:
     working_directory: ~/circleci-demo-workflows
     steps:
       - checkout
-      - run: bundle install --path vendor/bundle
-      - run: bundle exec rake db:create db:schema:load
+      - run: echo "Hello workflow 1"
       - run:
           name: Run tests
           command: rake
