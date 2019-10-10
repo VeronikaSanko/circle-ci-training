@@ -1,37 +1,31 @@
 version: 2.0
 
 jobs:
-  "ruby-2.2":
+  "Flow one":
     docker:
       - image: circleci/ruby:2.2-node
-      - image: circleci/postgres:9.4.12-alpine
-    working_directory: ~/circleci-demo-workflows
     steps:
       - checkout
-      - run: echo "Hello workflow 1"
+      - run: echo "Hello flow 1"
 
-  "ruby-2.3":
+  "Flow two":
     docker:
       - image: circleci/ruby:2.3-node
-      - image: circleci/postgres:9.4.12-alpine
-    working_directory: ~/circleci-demo-workflows
     steps:
       - checkout
-      - run: echo "Hello workflow 2"
+      - run: echo "Hello flow 2"
 
-  "ruby-2.4":
+  "Flow three":
     docker:
       - image: circleci/ruby:2.4-node
-      - image: circleci/postgres:9.4.12-alpine
-    working_directory: ~/circleci-demo-workflows
     steps:
       - checkout
-      - run: echo "Hello workflow 1"
+      - run: echo "Hello flow 3"
 
 workflows:
   version: 2
   build:
     jobs:
-      - "ruby-2.2"
-      - "ruby-2.3"
-      - "ruby-2.4"
+      - "Flow one"
+      - "Flow two"
+      - "Flow three"
