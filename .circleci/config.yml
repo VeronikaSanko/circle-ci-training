@@ -16,7 +16,7 @@ jobs:
   "Flow three":
     docker:
         - image: circleci/ruby:2.4-node
-    step:
+    steps:
         - checkout
         - run: echo "Hello from 3"
 
