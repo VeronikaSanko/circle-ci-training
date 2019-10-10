@@ -9,9 +9,6 @@ jobs:
     steps:
       - checkout
       - run: echo "Hello workflow 1"
-      - run:
-          name: Run tests
-          command: rake
 
   "ruby-2.3":
     docker:
@@ -21,9 +18,6 @@ jobs:
     steps:
       - checkout
       - run: echo "Hello workflow 2"
-      - run:
-          name: Run tests
-          command: rake
 
   "ruby-2.4":
     docker:
@@ -33,9 +27,6 @@ jobs:
     steps:
       - checkout
       - run: echo "Hello workflow 1"
-      - run:
-          name: Run tests
-          command: rake
 
 workflows:
   version: 2
