@@ -7,10 +7,7 @@ jobs:
     steps:
         - checkout
         - run: echo "Hello from 1"
-        - save_cache:
-          key: my-cache
-          paths:
-            - cache.txt
+        - save_cache: cache.txt
   "Flow two":  
     requires: 
         - "Flow one"
