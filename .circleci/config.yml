@@ -7,8 +7,6 @@ jobs:
     steps:
         - checkout
         - run: echo "Hello from 1"
-        - save_cache:
-          paths: ~/cache.txt
   "Flow two":  
     requires: 
         - "Flow one"
